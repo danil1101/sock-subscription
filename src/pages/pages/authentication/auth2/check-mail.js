@@ -1,8 +1,8 @@
 import ExportedImage from 'next-image-export-optimizer';
 import Link from 'Link';
 // material-ui
-import {useTheme} from '@mui/material/styles';
-import {Box, Button, Grid, Stack, Typography, useMediaQuery} from '@mui/material';
+import { useTheme } from '@mui/material/styles';
+import { Box, Button, Grid, Stack, Typography, useMediaQuery } from '@mui/material';
 
 // project imports
 import LAYOUT from 'constant';

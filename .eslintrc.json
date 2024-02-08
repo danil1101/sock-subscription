@@ -15,7 +15,10 @@
   "settings": {
     "import/resolver": {
       "node": {
-        "moduleDirectory": ["node_modules", "src/"]
+        "moduleDirectory": [
+          "node_modules",
+          "src/"
+        ]
       }
     }
   },
@@ -28,7 +31,11 @@
     },
     "ecmaVersion": 12
   },
-  "plugins": ["prettier", "react", "react-hooks"],
+  "plugins": [
+    "prettier",
+    "react",
+    "react-hooks"
+  ],
   "rules": {
     "react/jsx-filename-extension": 0,
     "no-param-reassign": 0,
@@ -44,14 +51,19 @@
     "prefer-destructuring": 0,
     "no-shadow": 0,
     "import/no-named-as-default": 0,
-    "import/no-unresolved": [2, { "caseSensitive": false }],
+    "import/no-unresolved": [
+      2,
+      {
+        "caseSensitive": false
+      }
+    ],
     "no-unused-vars": [
       1,
       {
         "ignoreRestSiblings": false
       }
-    ],
-    "prettier/prettier": [
+    ]
+    /*"prettier/prettier": [
       2,
       {
         "bracketSpacing": true,
@@ -62,6 +74,6 @@
         "useTabs": false,
         "endOfLine": "auto"
       }
-    ]
+    ]*/
   }
 }
