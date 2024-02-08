@@ -2,7 +2,6 @@
   "name": "berry-react-material-next-js",
   "version": "3.1.3",
   "private": true,
-  "homepage": "https://danil1101.github.io/sock-subscription/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
