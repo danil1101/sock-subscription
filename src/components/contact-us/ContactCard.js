@@ -1,22 +1,22 @@
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 import React from 'react';
 import Link from 'Link';
 
 // material-ui
-import { useTheme } from '@mui/material/styles';
+import {useTheme} from '@mui/material/styles';
 import {
-  Button,
-  Box,
-  Card,
-  CardContent,
-  Container,
-  FormControl,
-  Grid,
-  InputLabel,
-  MenuItem,
-  OutlinedInput,
-  TextField,
-  Typography
+    Box,
+    Button,
+    Card,
+    CardContent,
+    Container,
+    FormControl,
+    Grid,
+    InputLabel,
+    MenuItem,
+    OutlinedInput,
+    TextField,
+    Typography
 } from '@mui/material';
 
 // third-party
@@ -24,7 +24,7 @@ import NumberFormat from 'react-number-format';
 
 // project imports
 import AnimateButton from 'components/ui-component/extended/AnimateButton';
-import { gridSpacing } from 'store/constant';
+import {gridSpacing} from 'store/constant';
 
 // assets
 const mailImg = '/assets/images/landing/img-contact-mail.svg';
@@ -119,7 +119,7 @@ const ContactCard = () => {
               animation: '5s wings ease-in-out infinite'
             }}
           >
-            <Image src={mailImg} alt="Berry Dashboard" layout="intrinsic" width="400" height="270" />
+            <ExportedImage src={mailImg} alt="Berry Dashboard" layout="intrinsic" width="400" height="270" />
           </Box>
         </Grid>
         <Grid item xs={10} sx={{ mb: -37.5 }}>

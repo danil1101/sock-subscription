@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 
 // material-ui
 import {
@@ -126,7 +126,7 @@ const EditItem = ({ item, profiles, userStory, columns, handleDrawerOpen }) => {
                     isOptionEqualToValue={(option) => option.id === formik.values.assign}
                     renderOption={(props, option) => (
                       <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
-                        <Image loading="lazy" width="20" height="20" src={`${avatarImage}/${option.avatar}`} alt="" />
+                        <ExportedImage loading="lazy" width="20" height="20" src={`${avatarImage}/${option.avatar}`} alt="" />
                         {option.name}
                       </Box>
                     )}

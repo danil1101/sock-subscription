@@ -1,24 +1,24 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 
 // material-ui
 import {
+  Autocomplete,
   Box,
   Button,
   Divider,
   Drawer,
-  Grid,
-  Typography,
-  Autocomplete,
   FormControl,
   FormControlLabel,
+  Grid,
   MenuItem,
   Radio,
   RadioGroup,
   Select,
   Stack,
-  TextField
+  TextField,
+  Typography
 } from '@mui/material';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
@@ -37,7 +37,7 @@ import AlertStoryDelete from './AlertStoryDelete';
 import AnimateButton from 'components/ui-component/extended/AnimateButton';
 import { openSnackbar } from 'store/slices/snackbar';
 import { useDispatch, useSelector } from 'store';
-import { editStory, deleteStory } from 'store/slices/kanban';
+import { deleteStory, editStory } from 'store/slices/kanban';
 
 // assets
 import DeleteTwoToneIcon from '@mui/icons-material/DeleteTwoTone';
@@ -212,8 +212,17 @@ const EditStory = ({ story, open, handleDrawerOpen }) => {
                                   getOptionLabel={(option) => option.name}
                                   isOptionEqualToValue={(option) => option.id === formik.values.assign}
                                   renderOption={(props, option) => (
-                                    <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
-                                      <Image height="20" width="20" src={`${avatarImage}/${option.avatar}`} alt="" />
+                                    <Box
+                                      component="li"
+                                      sx={{
+                                        '& > img': {
+                                          mr: 2,
+                                          flexShrink: 0
+                                        }
+                                      }}
+                                      {...props}
+                                    >
+                                      <ExportedImage height="20" width="20" src={`${avatarImage}/${option.avatar}`} alt="" />
                                       {option.name}
                                     </Box>
                                   )}

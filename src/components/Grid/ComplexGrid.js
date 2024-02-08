@@ -1,7 +1,6 @@
-import Image from 'next/image';
 // material-ui
-import { styled } from '@mui/material/styles';
-import { ButtonBase, Grid, Typography } from '@mui/material';
+import {styled} from '@mui/material/styles';
+import {ButtonBase, Grid, Typography} from '@mui/material';
 
 // project imports
 import SubCard from 'components/ui-component/cards/SubCard';

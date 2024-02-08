@@ -1,4 +1,4 @@
-// import Image from 'next/image';
+// import ExportedImage from 'next-image-export-optimizer';
 // import Link from 'Link';
 
 // material-ui
@@ -123,7 +123,7 @@ const Register = () => (
                       textAlign: 'center'
                     }}
                   >
-                    <Image alt="Auth method" src={imgMain} width={300} height={300} />
+                    <ExportedImage alt="Auth method" src={imgMain} width={300} height={300} />
                   </div>
                 </Grid>
               </Grid>

@@ -1,8 +1,8 @@
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 
 // material-ui
-import { styled, useTheme } from '@mui/material/styles';
-import { Box, Container, Grid, Typography } from '@mui/material';
+import {styled, useTheme} from '@mui/material/styles';
+import {Box, Container, Grid, Typography} from '@mui/material';
 
 // project imports
 import LAYOUT from 'constant';
@@ -11,7 +11,7 @@ import Page from 'components/ui-component/Page';
 import AppBar from 'components/ui-component/extended/AppBar';
 import MainCard from 'components/ui-component/cards/MainCard';
 import Accordion from 'components/ui-component/extended/Accordion';
-import { gridSpacing } from 'store/constant';
+import {gridSpacing} from 'store/constant';
 
 // assets
 const mailImg = '/assets/images/landing/img-contact-mail.svg';
@@ -87,7 +87,11 @@ const Faqs = () => {
                   <Typography
                     variant="h4"
                     component="div"
-                    sx={{ fontWeight: 400, lineHeight: 1.4, [theme.breakpoints.up('md')]: { my: 0, mx: 12.5 } }}
+                    sx={{
+                      fontWeight: 400,
+                      lineHeight: 1.4,
+                      [theme.breakpoints.up('md')]: { my: 0, mx: 12.5 }
+                    }}
                     color="white"
                   >
                     Please refer the Frequently ask question for your quick help
@@ -107,7 +111,7 @@ const Faqs = () => {
                   animation: '5s wings ease-in-out infinite'
                 }}
               >
-                <Image src={mailImg} alt="Berry Dashboard" layout="intrinsic" width="400" height="270" />
+                <ExportedImage src={mailImg} alt="Berry Dashboard" layout="intrinsic" width="400" height="270" />
               </Box>
             </Grid>
             <Grid item xs={12}>

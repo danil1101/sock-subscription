@@ -1,9 +1,9 @@
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 import Link from 'Link';
 
 // material-ui
-import { useTheme } from '@mui/material/styles';
-import { Box, Divider, Grid, Stack, Typography, useMediaQuery } from '@mui/material';
+import {useTheme} from '@mui/material/styles';
+import {Box, Divider, Grid, Stack, Typography, useMediaQuery} from '@mui/material';
 
 // project imports
 import LAYOUT from 'constant';
@@ -121,7 +121,7 @@ const ForgotPassword = () => {
                   </Grid>
                 </Grid>
                 <Grid item xs={12} sx={{ textAlign: 'center' }}>
-                  <Image src={imgMain} alt="Berry Dashboard" layout="intrinsic" width="300px" height="340px" />
+                  <ExportedImage src={imgMain} alt="Berry Dashboard" layout="intrinsic" width="300px" height="340px" />
                 </Grid>
               </Grid>
             </BackgroundPattern2>

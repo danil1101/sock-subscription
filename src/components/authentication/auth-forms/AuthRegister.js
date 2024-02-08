@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 import React, { useEffect } from 'react';
 import Link from 'Link';
 // material-ui
@@ -95,7 +95,7 @@ const FirebaseRegister = ({ ...others }) => {
               }}
             >
               <Box sx={{ mr: { xs: 1, sm: 2 }, width: 20, height: 20, marginRight: matchDownSM ? 8 : 16 }}>
-                <Image src={Google} alt="Berry Dashboard" layout="intrinsic" width="16px" height="16px" />
+                <ExportedImage src={Google} alt="Berry Dashboard" layout="intrinsic" width="16px" height="16px" />
               </Box>
               Sign up with Google
             </Button>

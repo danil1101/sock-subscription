@@ -1,11 +1,11 @@
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 // material-ui
-import { useTheme, styled } from '@mui/material/styles';
-import { Box, Container, Grid, Typography } from '@mui/material';
+import {styled, useTheme} from '@mui/material/styles';
+import {Box, Container, Grid, Typography} from '@mui/material';
 
 // project imports
 import Slider from './Slider';
-import { gridSpacing } from 'store/constant';
+import {gridSpacing} from 'store/constant';
 
 // assets
 const imgLayout1 = '/assets/images/landing/demo-dark.png';
@@ -140,7 +140,11 @@ const LayoutsPage = () => {
             <Grid container alignItems="center" spacing={gridSpacing}>
               <Grid item sm={6}>
                 <LayoutImageWrapper>
-                  <Image src={theme.palette.mode === 'dark' ? imgLayoutDarkGrid : imgLayoutGrid} alt="Berry Dashboard" layout="fill" />
+                  <ExportedImage
+                    src={theme.palette.mode === 'dark' ? imgLayoutDarkGrid : imgLayoutGrid}
+                    alt="Berry Dashboard"
+                    layout="fill"
+                  />
                   <LayoutImage src={imgLayout1} alt="Berry" />
                 </LayoutImageWrapper>
               </Grid>
@@ -174,7 +178,11 @@ const LayoutsPage = () => {
               </Grid>
               <Grid item sm={6}>
                 <LayoutImageWrapper>
-                  <Image src={theme.palette.mode === 'dark' ? imgLayoutDarkGrid : imgLayoutGrid} alt="Berry Dashboard" layout="fill" />
+                  <ExportedImage
+                    src={theme.palette.mode === 'dark' ? imgLayoutDarkGrid : imgLayoutGrid}
+                    alt="Berry Dashboard"
+                    layout="fill"
+                  />
                   <LayoutImage src={imgLayout2} alt="Berry" style={{ animationDelay: '1.5s' }} />
                 </LayoutImageWrapper>
               </Grid>
@@ -184,7 +192,11 @@ const LayoutsPage = () => {
             <Grid container alignItems="center" spacing={gridSpacing}>
               <Grid item sm={6}>
                 <LayoutImageWrapper>
-                  <Image src={theme.palette.mode === 'dark' ? imgLayoutDarkGrid : imgLayoutGrid} alt="Berry Dashboard" layout="fill" />
+                  <ExportedImage
+                    src={theme.palette.mode === 'dark' ? imgLayoutDarkGrid : imgLayoutGrid}
+                    alt="Berry Dashboard"
+                    layout="fill"
+                  />
                   <LayoutImage src={imgLayout3} alt="Berry" style={{ animationDelay: '3s' }} />
                 </LayoutImageWrapper>
               </Grid>

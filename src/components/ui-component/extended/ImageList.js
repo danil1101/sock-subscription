@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 
 // material-ui
-import { ImageListItem, ImageListItemBar } from '@mui/material';
+import {ImageListItem, ImageListItemBar} from '@mui/material';
 import MImageList from '@mui/material/ImageList';
 
 // project imports
@@ -35,7 +35,7 @@ const ImageList = ({ itemData }) => {
 
         return (
           <ImageListItem key={index} cols={cols} rows={rows} sx={{ overflow: 'hidden', borderRadius: `${borderRadius}px` }}>
-            <Image src={srcset(item.img, 250, 200, rows, cols)} alt={item.title} layout="intrinsic" width="400" height="270" />
+            <ExportedImage src={srcset(item.img, 250, 200, rows, cols)} alt={item.title} layout="intrinsic" width="400" height="270" />
 
             <ImageListItemBar
               sx={{

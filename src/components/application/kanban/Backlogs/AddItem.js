@@ -1,21 +1,21 @@
 import PropTypes from 'prop-types';
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 
 // material-ui
 import {
+  Autocomplete,
   Box,
   Button,
   Drawer,
-  Grid,
-  Typography,
-  Autocomplete,
   FormControl,
   FormControlLabel,
+  Grid,
   MenuItem,
   Radio,
   RadioGroup,
   Select,
-  TextField
+  TextField,
+  Typography
 } from '@mui/material';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
@@ -148,7 +148,7 @@ const AddItem = ({ open, handleDrawerOpen, storyId }) => {
                           isOptionEqualToValue={(option) => option.id === formik.values.assign}
                           renderOption={(props, option) => (
                             <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
-                              <Image width={20} height={20} src={`${avatarImage}/${option.avatar}`} alt="" />
+                              <ExportedImage width={20} height={20} src={`${avatarImage}/${option.avatar}`} alt="" />
                               {option.name}
                             </Box>
                           )}

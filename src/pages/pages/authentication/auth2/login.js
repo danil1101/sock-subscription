@@ -1,9 +1,9 @@
 import Link from 'Link';
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 
 // material-ui
-import { useTheme } from '@mui/material/styles';
-import { Box, Divider, Grid, Stack, Typography, useMediaQuery } from '@mui/material';
+import {useTheme} from '@mui/material/styles';
+import {Box, Divider, Grid, Stack, Typography, useMediaQuery} from '@mui/material';
 
 // project imports
 import LAYOUT from 'constant';
@@ -131,7 +131,7 @@ const Login = () => {
                       textAlign: 'center'
                     }}
                   >
-                    <Image alt="Auth method" src={imgMain} width={300} height={300} />
+                    <ExportedImage alt="Auth method" src={imgMain} width={300} height={300} />
                   </div>
                 </Grid>
               </Grid>

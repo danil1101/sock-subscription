@@ -1,7 +1,7 @@
 import React from 'react';
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 // material-ui
-import { useTheme, styled } from '@mui/material/styles';
+import { styled, useTheme } from '@mui/material/styles';
 import { Avatar, ButtonBase, Card, CardContent, CardMedia, Grid, Link, Typography } from '@mui/material';
 
 // third-party
@@ -166,8 +166,8 @@ const ComingSoon1 = () => {
                 transform: 'rotate(145deg)'
               }}
             />
-            {theme.palette.mode === 'light' && <Image src={logo} alt="Berry" width="100" height={100} />}
-            {theme.palette.mode === 'dark' && <Image src={logoDark} alt="Berry" width="100" height={100} />}
+            {theme.palette.mode === 'light' && <ExportedImage src={logo} alt="Berry" width="100" height={100} />}
+            {theme.palette.mode === 'dark' && <ExportedImage src={logoDark} alt="Berry" width="100" height={100} />}
           </CardContent>
           <Grid container spacing={gridSpacing}>
             <Grid item xs={12}>
@@ -346,7 +346,7 @@ const ComingSoon1 = () => {
                                 </Typography>
                               </Grid>
                               <Grid item>
-                                <Image src={companyLogo} alt="Berry" width={128} height={27} />
+                                <ExportedImage src={companyLogo} alt="Berry" width={128} height={27} />
                               </Grid>
                             </Grid>
                           </Grid>

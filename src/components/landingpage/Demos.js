@@ -1,11 +1,11 @@
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 // material-ui
-import { Button, ButtonBase, Container, Grid, Typography } from '@mui/material';
+import {Button, ButtonBase, Container, Grid, Typography} from '@mui/material';
 import Link from 'Link';
 // project imports
 import FadeInWhenVisible from './Animation';
 import AnimateButton from 'components/ui-component/extended/AnimateButton';
-import { gridSpacing } from 'store/constant';
+import {gridSpacing} from 'store/constant';
 
 // ==============================|| LANDING - DEMOS PAGE ||============================== //
 
@@ -42,20 +42,28 @@ const DemosPage = () => (
               <ButtonBase
                 component={Link}
                 href="/dashboard/default"
-                sx={{ width: '100%', height: { xs: '220px', sm: '250px', md: '300px' }, position: 'relative' }}
+                sx={{
+                  width: '100%',
+                  height: { xs: '220px', sm: '250px', md: '300px' },
+                  position: 'relative'
+                }}
               >
-                <Image src="/assets/images/landing/img-demo-1.jpg" alt="Berry Dashboard" layout="fill" />
+                <ExportedImage src="/assets/images/landing/img-demo-1.jpg" alt="Berry Dashboard" layout="fill" />
               </ButtonBase>
             </FadeInWhenVisible>
           </Grid>
           <Grid item xs={12} md={4} sm={6}>
             <FadeInWhenVisible>
               <ButtonBase
-                sx={{ width: '100%', height: { xs: '220px', sm: '250px', md: '300px' }, position: 'relative' }}
+                sx={{
+                  width: '100%',
+                  height: { xs: '220px', sm: '250px', md: '300px' },
+                  position: 'relative'
+                }}
                 component={Link}
                 href="/app/user/social-profile/posts"
               >
-                <Image src="/assets/images/landing/img-demo-2.jpg" alt="Berry Social App" layout="fill" />
+                <ExportedImage src="/assets/images/landing/img-demo-2.jpg" alt="Berry Social App" layout="fill" />
               </ButtonBase>
             </FadeInWhenVisible>
           </Grid>
@@ -64,9 +72,13 @@ const DemosPage = () => (
               <ButtonBase
                 component={Link}
                 href="/dashboard/default"
-                sx={{ width: '100%', height: { xs: '220px', sm: '250px', md: '300px' }, position: 'relative' }}
+                sx={{
+                  width: '100%',
+                  height: { xs: '220px', sm: '250px', md: '300px' },
+                  position: 'relative'
+                }}
               >
-                <Image src="/assets/images/landing/img-demo-3.jpg" alt="Berry Mail App" layout="fill" />
+                <ExportedImage src="/assets/images/landing/img-demo-3.jpg" alt="Berry Mail App" layout="fill" />
               </ButtonBase>
             </FadeInWhenVisible>
           </Grid>

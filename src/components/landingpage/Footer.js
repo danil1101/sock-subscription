@@ -1,6 +1,7 @@
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
+
 // material-ui
-import { useTheme, styled } from '@mui/material/styles';
+import { styled, useTheme } from '@mui/material/styles';
 import { Container, Grid, Link, Typography } from '@mui/material';
 
 // project imports
@@ -57,14 +58,17 @@ const FooterPage = () => {
         <Container>
           <Grid container alignItems="center" spacing={gridSpacing}>
             <Grid item xs={12} sm={4}>
-              <Image src={logoDark} alt="Berry" width={100} height={34} layout="intrinsic" />
+              <ExportedImage src={logoDark} alt="Berry" width={100} height={34} layout="intrinsic" />
             </Grid>
             <Grid item xs={12} sm={8}>
               <Grid
                 container
                 alignItems="center"
                 spacing={2}
-                sx={{ justifyContent: 'flex-end', [theme.breakpoints.down('md')]: { justifyContent: 'center' } }}
+                sx={{
+                  justifyContent: 'flex-end',
+                  [theme.breakpoints.down('md')]: { justifyContent: 'center' }
+                }}
               >
                 <Grid item>
                   <FooterLink href="https://blog.berrydashboard.io/" target="_blank" underline="hover">

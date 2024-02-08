@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 
 // material-ui
-import { styled, useTheme } from '@mui/material/styles';
-import { Avatar, Box, Grid, Menu, MenuItem, Typography } from '@mui/material';
+import {styled, useTheme} from '@mui/material/styles';
+import {Avatar, Box, Grid, Menu, MenuItem, Typography} from '@mui/material';
 
 // project imports
 import MainCard from 'components/ui-component/cards/MainCard';
@@ -96,7 +96,7 @@ const EarningCard = ({ isLoading }) => {
                         mt: 1
                       }}
                     >
-                      <Image src={EarningIcon} height={30} width={30} alt="Notification" />
+                      <ExportedImage src={EarningIcon} height={30} width={30} alt="Notification" />
                     </Avatar>
                   </Grid>
                   <Grid item>
@@ -150,7 +150,17 @@ const EarningCard = ({ isLoading }) => {
               <Grid item>
                 <Grid container alignItems="center">
                   <Grid item>
-                    <Typography sx={{ fontSize: '2.125rem', fontWeight: 500, mr: 1, mt: 1.75, mb: 0.75 }}>$500.00</Typography>
+                    <Typography
+                      sx={{
+                        fontSize: '2.125rem',
+                        fontWeight: 500,
+                        mr: 1,
+                        mt: 1.75,
+                        mb: 0.75
+                      }}
+                    >
+                      $500.00
+                    </Typography>
                   </Grid>
                   <Grid item>
                     <Avatar

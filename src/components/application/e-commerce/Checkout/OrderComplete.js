@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 import { forwardRef } from 'react';
 import Link from 'Link';
 
 // material-ui
 import { useTheme } from '@mui/material/styles';
-import { Box, Button, Dialog, Divider, Grid, Stack, Typography, Zoom, useMediaQuery } from '@mui/material';
+import { Box, Button, Dialog, Divider, Grid, Stack, Typography, useMediaQuery, Zoom } from '@mui/material';
 
 // project imports
 import MainCard from 'components/ui-component/cards/MainCard';
@@ -63,8 +63,14 @@ const OrderComplete = ({ open }) => {
               </Stack>
             </Grid>
             <Grid item xs={12} sx={{ m: 3 }}>
-              <Box sx={{ position: 'relative', width: { xs: '200px', md: '400px' }, height: { xs: '112px', md: '223px' } }}>
-                <Image src={completed} alt="Order Complete" layout="fill" />
+              <Box
+                sx={{
+                  position: 'relative',
+                  width: { xs: '200px', md: '400px' },
+                  height: { xs: '112px', md: '223px' }
+                }}
+              >
+                <ExportedImage src={completed} alt="Order Complete" layout="fill" />
               </Box>
             </Grid>
             <Grid item xs={12} sm={9}>
