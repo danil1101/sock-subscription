@@ -1,27 +1,25 @@
-import Image from 'next/image';
-import Link from 'Link';
+// import Image from 'next/image';
+// import Link from 'Link';
 
 // material-ui
-import { useTheme } from '@mui/material/styles';
-import { Box, Divider, Grid, Stack, Typography, useMediaQuery } from '@mui/material';
-
-// project imports
+// import {useTheme} from '@mui/material/styles';
+// import {Box, Divider, Grid, Stack, Typography, useMediaQuery} from '@mui/material'; // project imports
 import LAYOUT from 'constant';
 import Layout from 'layout';
 import Page from 'components/ui-component/Page';
-import AuthRegister from 'components/authentication/auth-forms/AuthRegister';
-import AuthFooter from 'components/ui-component/cards/AuthFooter';
+// import AuthRegister from 'components/authentication/auth-forms/AuthRegister';
+// import AuthFooter from 'components/ui-component/cards/AuthFooter';
 import AuthWrapper2 from 'components/authentication/AuthWrapper2';
-import AuthCardWrapper from 'components/authentication/AuthCardWrapper';
-import Logo from 'components/ui-component/Logo';
-import BackgroundPattern2 from 'components/ui-component/cards/BackgroundPattern2';
-import AuthSlider from 'components/ui-component/cards/AuthSlider';
+// import AuthCardWrapper from 'components/authentication/AuthCardWrapper';
+// import Logo from 'components/ui-component/Logo';
+// import BackgroundPattern2 from 'components/ui-component/cards/BackgroundPattern2';
+// import AuthSlider from 'components/ui-component/cards/AuthSlider'; // assets
 
 // assets
-const imgMain = '/assets/images/auth/img-a2-signup.svg';
+// const imgMain = '/assets/images/auth/img-a2-signup.svg';
 
 // carousel items
-const items = [
+/* const items = [
   {
     title: 'Power of React with Material UI',
     description: 'Powerful and easy to use multipurpose theme'
@@ -34,19 +32,15 @@ const items = [
     title: 'Power of React with Material UI',
     description: 'Powerful and easy to use multipurpose theme'
   }
-];
+]; */
 
 // ===============================|| AUTH2 - REGISTER ||=============================== //
 
-const Register = () => {
-  const theme = useTheme();
-  const matchDownSM = useMediaQuery(theme.breakpoints.down('md'));
-  const matchDownMD = useMediaQuery(theme.breakpoints.down('lg'));
-
-  return (
-    <Page title="Register">
-      <AuthWrapper2>
-        <Grid container justifyContent={matchDownSM ? 'center' : 'space-between'} alignItems="center">
+const Register = () => (
+  <Page title="Register">
+    <AuthWrapper2>
+      Register
+      {/* <Grid container justifyContent={matchDownSM ? 'center' : 'space-between'} alignItems="center">
           <Grid item md={6} lg={7} xs={12} sx={{ minHeight: '100vh' }}>
             <Grid
               sx={{ minHeight: '100vh' }}
@@ -135,11 +129,10 @@ const Register = () => {
               </Grid>
             </BackgroundPattern2>
           </Grid>
-        </Grid>
-      </AuthWrapper2>
-    </Page>
-  );
-};
+        </Grid> */}
+    </AuthWrapper2>
+  </Page>
+);
 
 Register.getLayout = function getLayout(page) {
   return <Layout variant={LAYOUT.minimal}>{page}</Layout>;
