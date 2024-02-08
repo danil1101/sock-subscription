@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next build && next-image-export-optimizer"
   },
   "dependencies": {
     "@auth0/auth0-spa-js": "^1.22.0",
@@ -53,6 +54,7 @@
     "lodash": "^4.17.21",
     "material-ui-popup-state": "^2.0.0",
     "next": "12.1.0",
+    "next-image-export-optimizer": "^1.12.3",
     "next-transpile-modules": "^9.0.0",
     "prop-types": "^15.8.1",
     "react": "17.0.2",
